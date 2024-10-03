@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Selection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Select a Service</h1>
+        <ul class="service-list">
+            <li onclick="selectService('bigcash')">BigCash</li>
+            <!-- <li onclick="selectService('ydotgames')">YDotGames</li>
+            <li onclick="selectService('onlinetrivia')">Online Trivia</li>
+            <li onclick="selectService('fantasyfootball')">Fantasy Football</li> -->
+        </ul>
+    </div>
+
+    <!-- Package Page -->
+    <div id="packagesPage" class="hidden container">
+        <h2 id="serviceTitle">Choose a Package</h2>
+        <form id="package-form">
+            <p id="errorMessage" class="error hidden">Please select a package.</p>
+            <ul id="package-list">
+                <!-- Packages will be injected here -->
+            </ul>
+            <div class="btn-div">
+                <button onclick="goBack()">Go Back</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Success!</h3>
+            <p>Your transaction was successful. Enjoy your game!</p>
+            <button onclick="closeModal('successModal')">Continue</button>
+        </div>
+    </div>
+
+    <!-- Failure Modal -->
+    <div id="failureModal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Failed!</h3>
+            <p>Sorry, your transaction was unsuccessful.</p>
+            <button onclick="closeModal('failureModal')">Try Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
